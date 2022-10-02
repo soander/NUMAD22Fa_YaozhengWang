@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 
 import edu.northeastern.numad22fa_yaozhengwang.aboutMe.AboutMeActivity;
+import edu.northeastern.numad22fa_yaozhengwang.linkCollector.LinkCollectorActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button clicky = findViewById(R.id.clicky);
         clicky.setOnClickListener(view -> openClickyActivity());
+
+        Button linkCollector = findViewById(R.id.linkCollector);
+        linkCollector.setOnClickListener(view -> openLinkCollectorActivity());
     }
 
     public void openClickyActivity() {
@@ -29,6 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openAboutMeActivity() {
         Intent intent = new Intent(this, AboutMeActivity.class);
+        startActivity(intent);
+    }
+
+    public void openLinkCollectorActivity() {
+        Intent intent = new Intent(this, LinkCollectorActivity.class);
         startActivity(intent);
     }
 }

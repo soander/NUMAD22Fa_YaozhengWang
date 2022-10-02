@@ -10,6 +10,15 @@
     <string name="button_f">F</string>
     <string name="click">Pressed: -</string>
     <string name="link_collector">Link Collector</string>
-    <string name="desc">floatingButton</string>
+    <string name="desc">Floating Button</string>
     <string name="about">Name: Yaozheng Wang \nEmail: wang.yaozh@northeastern.edu</string>
+    <string name="link_name">Name: </string>
+    <string name="link_url">Url: </string>
+    <string name="Http">http://</string>
+    <string name="link_info">Enter A Link</string>
+    <string name="Add">Add</string>
+    <string name="add_link_success">Added a link successfully</string>
+    <string name="invalid_link">This is a invalid url! Please input a new url!</string>
+    <string name="Cancel">Cancel</string>
+    <string name="remove_a_link">Removed a link</string>
 </resources>
