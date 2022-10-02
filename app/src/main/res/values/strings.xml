@@ -10,4 +10,6 @@
     <string name="button_f">F</string>
     <string name="click">Pressed: -</string>
     <string name="link_collector">Link Collector</string>
+    <string name="desc">floatingButton</string>
+    <string name="about">Name: Yaozheng Wang \nEmail: wang.yaozh@northeastern.edu</string>
 </resources>

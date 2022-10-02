@@ -4,9 +4,9 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
-import android.widget.Toast;
+
+import edu.northeastern.numad22fa_yaozhengwang.aboutMe.AboutMeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -16,12 +16,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Button aboutMe = findViewById(R.id.aboutMe);
-        aboutMe.setOnClickListener(view -> Toast.makeText(
-                MainActivity.this,
-                "Name: Yaozheng Wang\n" +
-                        "Email: wang.yaozh@northeastern.edu",
-                Toast.LENGTH_LONG).show()
-        );
+        aboutMe.setOnClickListener(view -> openAboutMeActivity());
 
         Button clicky = findViewById(R.id.clicky);
         clicky.setOnClickListener(view -> openClickyActivity());
@@ -29,6 +24,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openClickyActivity() {
         Intent intent = new Intent(this, ClickyActivity.class);
+        startActivity(intent);
+    }
+
+    public void openAboutMeActivity() {
+        Intent intent = new Intent(this, AboutMeActivity.class);
         startActivity(intent);
     }
 }
