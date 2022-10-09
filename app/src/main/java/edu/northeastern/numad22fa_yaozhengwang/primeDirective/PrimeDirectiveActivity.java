@@ -22,6 +22,7 @@ public class PrimeDirectiveActivity extends AppCompatActivity {
     private final Handler primeTextHandler = new Handler();
     private TextView currentNumberText;
     private TextView lastPrimeNumberText;
+    private CheckBox pacifierSwitchCheckBox;
     private static final String TAG = "PrimeDirectiveActivity";
 
     @Override
@@ -30,6 +31,7 @@ public class PrimeDirectiveActivity extends AppCompatActivity {
         setContentView(R.layout.activity_prime_directive);
         currentNumberText = findViewById(R.id.currentNumber);
         lastPrimeNumberText = findViewById(R.id.lastPrimeNumber);
+        pacifierSwitchCheckBox = findViewById(R.id.pacifierSwitch);
         Button findPrimes = findViewById(R.id.findPrimes);
         findPrimes.setOnClickListener(l -> {
             find = true;
@@ -68,8 +70,7 @@ public class PrimeDirectiveActivity extends AppCompatActivity {
                 "Now the number being searched is " + currentNum));
         lastPrimeNumberText.setText(new StringBuilder(
                 "The last prime number searched is " + foundPrime));
-        CheckBox checkBox = findViewById(R.id.pacifierSwitch);
-        checkBox.setChecked(pacifierSwitch);
+        pacifierSwitchCheckBox.setChecked(pacifierSwitch);
         if (find) {
             runFindPrimesThread();
         }
