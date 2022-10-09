@@ -21,4 +21,10 @@
     <string name="invalid_link">This is a invalid url! Please input a new url!</string>
     <string name="Cancel">Cancel</string>
     <string name="remove_a_link">Removed a link</string>
+    <string name="prime_directive">Prime Directive</string>
+    <string name="find_primes">Find Primes</string>
+    <string name="terminate_search">Terminate Search</string>
+    <string name="pacifier_switch">Pacifier Switch</string>
+    <string name="current_number">Now the number being searched is </string>
+    <string name="last_prime_number">The last prime number searched is</string>
 </resources>

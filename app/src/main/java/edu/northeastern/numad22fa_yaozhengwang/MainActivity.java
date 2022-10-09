@@ -9,6 +9,7 @@ import android.widget.Button;
 
 import edu.northeastern.numad22fa_yaozhengwang.aboutMe.AboutMeActivity;
 import edu.northeastern.numad22fa_yaozhengwang.linkCollector.LinkCollectorActivity;
+import edu.northeastern.numad22fa_yaozhengwang.primeDirective.PrimeDirectiveActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -25,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button linkCollector = findViewById(R.id.linkCollector);
         linkCollector.setOnClickListener(view -> openLinkCollectorActivity());
+
+        Button primeDirective = findViewById(R.id.primeDirective);
+        primeDirective.setOnClickListener(view -> openPrimeDirectiveActivity());
     }
 
     public void openClickyActivity() {
@@ -39,6 +43,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openLinkCollectorActivity() {
         Intent intent = new Intent(this, LinkCollectorActivity.class);
+        startActivity(intent);
+    }
+
+    public void openPrimeDirectiveActivity() {
+        Intent intent = new Intent(this, PrimeDirectiveActivity.class);
         startActivity(intent);
     }
 }

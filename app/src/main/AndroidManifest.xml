@@ -25,6 +25,7 @@
         <activity android:name=".ClickyActivity" />
         <activity android:name=".aboutMe.AboutMeActivity" />
         <activity android:name=".linkCollector.LinkCollectorActivity" />
+        <activity android:name=".primeDirective.PrimeDirectiveActivity" />
     </application>
 
 </manifest>

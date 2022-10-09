@@ -2,65 +2,66 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".primeDirective.PrimeDirectiveActivity"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/hello"
+        android:id="@+id/currentNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textColor="@color/purple_500"
-        android:textSize="30sp"
+        android:text="@string/current_number"
+        android:textAllCaps="false"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/lastPrimeNumber"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/aboutMe"
+    <TextView
+        android:id="@+id/lastPrimeNumber"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/about_me"
+        android:text="@string/last_prime_number"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/clicky"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/findPrimes"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/hello" />
+        app:layout_constraintTop_toBottomOf="@+id/currentNumber" />
 
     <Button
-        android:id="@+id/clicky"
+        android:id="@+id/findPrimes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/clicky_clicky"
+        android:text="@string/find_primes"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/linkCollector"
+        app:layout_constraintBottom_toTopOf="@+id/terminateSearch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/aboutMe" />
+        app:layout_constraintTop_toBottomOf="@+id/lastPrimeNumber" />
 
     <Button
-        android:id="@+id/linkCollector"
+        android:id="@+id/terminateSearch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/link_collector"
+        android:text="@string/terminate_search"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/primeDirective"
+        app:layout_constraintBottom_toTopOf="@+id/pacifierSwitch"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/clicky" />
+        app:layout_constraintTop_toBottomOf="@id/findPrimes" />
 
-    <Button
-        android:id="@+id/primeDirective"
+    <CheckBox
+        android:id="@+id/pacifierSwitch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/prime_directive"
-        android:textAllCaps="false"
+        android:text="@string/pacifier_switch"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linkCollector" />
+        app:layout_constraintTop_toBottomOf="@+id/terminateSearch" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
