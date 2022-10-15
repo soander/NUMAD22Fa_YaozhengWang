@@ -27,4 +27,5 @@
     <string name="pacifier_switch">Pacifier Switch</string>
     <string name="current_number">Now the number being searched is </string>
     <string name="last_prime_number">The last prime number searched is</string>
+    <string name="location">Location</string>
 </resources>

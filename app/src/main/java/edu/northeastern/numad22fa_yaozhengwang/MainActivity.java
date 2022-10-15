@@ -29,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
         Button primeDirective = findViewById(R.id.primeDirective);
         primeDirective.setOnClickListener(view -> openPrimeDirectiveActivity());
+
+        Button location = findViewById(R.id.location);
+        location.setOnClickListener(view -> openLocationActivity());
     }
 
     public void openClickyActivity() {
@@ -48,6 +51,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openPrimeDirectiveActivity() {
         Intent intent = new Intent(this, PrimeDirectiveActivity.class);
+        startActivity(intent);
+    }
+
+    public void openLocationActivity() {
+        Intent intent = new Intent(this, LocationActivity.class);
         startActivity(intent);
     }
 }
