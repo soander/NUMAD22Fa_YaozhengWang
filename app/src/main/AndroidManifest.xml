@@ -3,6 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="edu.northeastern.numad22fa_yaozhengwang">
 
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
@@ -26,6 +29,7 @@
         <activity android:name=".aboutMe.AboutMeActivity" />
         <activity android:name=".linkCollector.LinkCollectorActivity" />
         <activity android:name=".primeDirective.PrimeDirectiveActivity" />
+        <activity android:name=".location.LocationActivity" />
     </application>
 
 </manifest>

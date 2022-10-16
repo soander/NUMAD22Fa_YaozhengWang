@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 import edu.northeastern.numad22fa_yaozhengwang.aboutMe.AboutMeActivity;
 import edu.northeastern.numad22fa_yaozhengwang.linkCollector.LinkCollectorActivity;
+import edu.northeastern.numad22fa_yaozhengwang.location.LocationActivity;
 import edu.northeastern.numad22fa_yaozhengwang.primeDirective.PrimeDirectiveActivity;
 
 public class MainActivity extends AppCompatActivity {

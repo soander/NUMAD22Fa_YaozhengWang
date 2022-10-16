@@ -28,4 +28,8 @@
     <string name="current_number">Now the number being searched is </string>
     <string name="last_prime_number">The last prime number searched is</string>
     <string name="location">Location</string>
+    <string name="latitude">Latitude Location: </string>
+    <string name="longitude">Longitude Location: </string>
+    <string name="total_distance">Total Distance: 0.0 meters</string>
+    <string name="reset_location">Reset Location</string>
 </resources>
