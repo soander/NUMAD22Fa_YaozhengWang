@@ -26,6 +26,7 @@ import com.google.android.gms.location.LocationRequest;
 import com.google.android.gms.location.LocationResult;
 import com.google.android.gms.location.LocationServices;
 
+import java.io.BufferedReader;
 import java.text.MessageFormat;
 
 import edu.northeastern.numad22fa_yaozhengwang.R;
@@ -49,13 +50,24 @@ public class LocationActivity extends AppCompatActivity {
         latitudeLocation = findViewById(R.id.latitudeText);
         longitudeLocation = findViewById(R.id.longitudeText);
         totalDistance = findViewById(R.id.totalDistance);
-        Button resetLocation = findViewById(R.id.resetLocation);
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
 
+        Button resetLocation = findViewById(R.id.resetLocation);
         resetLocation.setOnClickListener(l -> {
             total = 0;
             totalDistance.setText(MessageFormat.format(
                     "Total Distance: {0} meters", total));
+        });
+
+        Button shareLocation = findViewById(R.id.shareLocation);
+        shareLocation.setOnClickListener(l -> {
+            Intent sendIntent = new Intent();
+            sendIntent.setAction(Intent.ACTION_SEND);
+            sendIntent.putExtra(Intent.EXTRA_TEXT, "My location latitude is "
+                    + latitude + " and longitude is " + longitude + ".");
+            sendIntent.setType("text/plain");
+            Intent shareIntent = Intent.createChooser(sendIntent, null);
+            startActivity(shareIntent);
         });
 
         getCurrLocation();
